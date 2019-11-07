@@ -41,8 +41,17 @@ class Airplane {
 */
 
 class Person {
-
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+  eat() {
+    console.log(this.name + ' eats some food.');
+  }
 }
+
+const mirage = new Person('Mirage');
+console.log(mirage);
 
 /*
   TASK 2
