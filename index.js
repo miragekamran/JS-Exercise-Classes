@@ -44,14 +44,20 @@ class Person {
   constructor(name, age) {
     this.name = name;
     this.age = age;
+    this.stomach = [];
   }
   eat() {
-    console.log(this.name + ' eats some food.');
+    this.stomach = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  }
+  poop() {
+    this.stomach = [];
+  }
+  toString() {
+    return `${this.name}, ${this.age}`;
   }
 }
 
-const mirage = new Person('Mirage');
-console.log(mirage);
+
 
 /*
   TASK 2
@@ -68,7 +74,20 @@ console.log(mirage);
 */
 
 class Car {
-
+  constructor(model, milesPerGallon) {
+    this.model = model;
+    this.milesPerGallon = milesPerGallon;
+    this.tank = 0;
+    this.odometer = 0;
+  }
+  fill() {
+    this.tank++;
+  }
+  drive() {
+    this.odometer++;
+    this.tank--;
+    return `I ran out of fuel at ${this.odometer} miles!`;
+  }
 }
 
 /*
